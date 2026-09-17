@@ -1,0 +1,71 @@
+=== Mediciones de tiempos HTTPS (10 ejecuciones desde anfitrion Windows) ===
+=== curl.exe -k -w contra https://equipo.arqweb.test/ ===
+
+=== Run 1 ===
+    time_namelookup:  0.005878s
+       time_connect:  0.016230s
+    time_appconnect:  0.029239s
+  time_starttransfer: 0.033933s
+          time_total: 0.034038s
+=== Run 2 ===
+    time_namelookup:  0.006499s
+       time_connect:  0.017785s
+    time_appconnect:  0.029224s
+  time_starttransfer: 0.033035s
+          time_total: 0.033094s
+=== Run 3 ===
+    time_namelookup:  0.006736s
+       time_connect:  0.018124s
+    time_appconnect:  0.029746s
+  time_starttransfer: 0.033793s
+          time_total: 0.033866s
+=== Run 4 ===
+    time_namelookup:  0.005171s
+       time_connect:  0.016546s
+    time_appconnect:  0.028014s
+  time_starttransfer: 0.032969s
+          time_total: 0.033069s
+=== Run 5 ===
+    time_namelookup:  0.005532s
+       time_connect:  0.006585s
+    time_appconnect:  0.016269s
+  time_starttransfer: 0.020259s
+          time_total: 0.020366s
+=== Run 6 ===
+    time_namelookup:  0.005486s
+       time_connect:  0.006618s
+    time_appconnect:  0.016491s
+  time_starttransfer: 0.020349s
+          time_total: 0.020415s
+=== Run 7 ===
+    time_namelookup:  0.006343s
+       time_connect:  0.007408s
+    time_appconnect:  0.018532s
+  time_starttransfer: 0.023400s
+          time_total: 0.023509s
+=== Run 8 ===
+    time_namelookup:  0.005248s
+       time_connect:  0.015604s
+    time_appconnect:  0.027844s
+  time_starttransfer: 0.031218s
+          time_total: 0.031342s
+=== Run 9 ===
+    time_namelookup:  0.007122s
+       time_connect:  0.007992s
+    time_appconnect:  0.018673s
+  time_starttransfer: 0.022441s
+          time_total: 0.022499s
+=== Run 10 ===
+    time_namelookup:  0.007160s
+       time_connect:  0.008664s
+    time_appconnect:  0.018927s
+  time_starttransfer: 0.023644s
+          time_total: 0.023713s
+
+=== Resumen estadistico ===
+Metrica              Min         Promedio    Max
+time_namelookup      0.005171s   0.006117s   0.007160s
+time_connect         0.006585s   0.012156s   0.018124s
+time_appconnect      0.016269s   0.023296s   0.029746s
+time_starttransfer   0.020259s   0.027504s   0.033933s
+time_total           0.020366s   0.027591s   0.034038s

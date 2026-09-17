@@ -1,0 +1,16 @@
+=== Analisis del certificado autofirmado ===
+=== openssl s_client -connect 127.0.0.1:443 -servername equipo.arqweb.test ===
+
+subject=CN=equipo.arqweb.test
+issuer=CN=equipo.arqweb.test
+notBefore=Sep 13 20:43:15 2026 GMT
+notAfter=Sep 13 20:43:15 2027 GMT
+X509v3 Subject Alternative Name:
+    DNS:equipo.arqweb.test
+SHA1 Fingerprint=0C:B7:80:FC:52:A1:00:76:60:9D:18:9E:83:AD:F1:7E:FD:55:D1:89
+
+=== Parametros de la sesion TLS ===
+Protocol  : TLSv1.3
+Cipher    : TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+Verify return code: 18 (self-signed certificate)

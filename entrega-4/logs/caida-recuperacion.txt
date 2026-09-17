@@ -1,0 +1,32 @@
+=== Simulacion de caida y recuperacion del backend ===
+
+--- Servicio detenido (systemctl stop todos) ---
+todos.service - Todos Express SQLite
+     Active: inactive (dead) since Mon 2026-09-14 01:20:23 UTC
+    Process: 2375 ExecStart=/usr/bin/node .../bin/www (code=killed, signal=TERM)
+
+--- Respuesta con backend caido (desde Windows) ---
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.28.3 (Ubuntu)
+Content-Type: text/html
+Content-Length: 166
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+
+--- Logs del evento (journalctl -u todos) ---
+Sep 14 01:20:23 tp-electiva-vm systemd[1]: Stopping todos.service...
+Sep 14 01:20:23 tp-electiva-vm systemd[1]: todos.service: Deactivated successfully.
+Sep 14 01:20:23 tp-electiva-vm systemd[1]: Stopped todos.service.
+
+--- Servicio recuperado (systemctl start todos) ---
+todos.service - Todos Express SQLite
+     Active: active (running) since Mon 2026-09-14 01:22:16 UTC
+   Main PID: 2610 (node)
+
+--- Respuesta tras recuperacion (desde Windows) ---
+HTTP/1.1 200 OK
+Server: nginx/1.28.3 (Ubuntu)
+Content-Length: 763

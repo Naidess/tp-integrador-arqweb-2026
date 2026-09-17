@@ -1,0 +1,39 @@
+=== Prueba de concurrencia con Apache Benchmark ===
+=== ab -n 200 -c 10 https://192.168.56.101/ ===
+
+Server Software:        nginx/1.28.3
+Server Hostname:        192.168.56.101
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.3,TLS_AES_256_GCM_SHA384,2048,256
+
+Document Path:          /
+Document Length:        763 bytes
+
+Concurrency Level:      10
+Time taken for tests:   1.278 seconds
+Complete requests:      200
+Failed requests:        0
+Total transferred:      230600 bytes
+HTML transferred:       152600 bytes
+Requests per second:    156.45 [#/sec] (mean)
+Time per request:       63.917 [ms] (mean)
+Time per request:       6.392 [ms] (mean, across all concurrent requests)
+Transfer rate:          176.16 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        2    7   6.6      6      42
+Processing:    13   56  13.2     54     108
+Waiting:        5   55  13.4     54     108
+Total:         15   63  12.7     61     111
+
+Percentage of the requests served within a certain time (ms)
+  50%     61
+  66%     63
+  75%     66
+  80%     68
+  90%     73
+  95%     93
+  98%    105
+  99%    109
+ 100%    111 (longest request)

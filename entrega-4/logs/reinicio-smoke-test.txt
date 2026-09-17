@@ -1,0 +1,23 @@
+=== Reinicio completo de la VM y smoke test ===
+=== sudo reboot -> verificacion tras reinicio ===
+
+--- todos.service ---
+Active: active (running) since Mon 2026-09-14 01:52:17 UTC
+Main PID: 1042 (node)
+Memory: 126.6M
+
+--- nginx.service ---
+Active: active (running) since Mon 2026-09-14 01:52:18 UTC
+Main PID: 1079 (nginx)
+
+--- ufw status ---
+Status: active
+22/tcp    ALLOW    Anywhere
+80/tcp    ALLOW    Anywhere
+443/tcp   ALLOW    Anywhere
+
+--- Smoke test desde Windows ---
+HTTP/1.1 200 OK
+Server: nginx/1.28.3 (Ubuntu)
+
+Conclusion: todos los servicios levantaron automaticamente sin intervencion manual.

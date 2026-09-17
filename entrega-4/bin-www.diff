@@ -1,0 +1,5 @@
+--- bin/www (original)
++++ bin/www (corregido - Entrega 4, Hallazgo 1)
+@@ Listen on provided port @@
+-server.listen(port);
++server.listen(port, process.env.HOST || '0.0.0.0');

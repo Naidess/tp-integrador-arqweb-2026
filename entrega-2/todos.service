@@ -1,0 +1,14 @@
+[Unit]
+Description=Todos Express SQLite
+After=network.target
+
+[Service]
+User=admin1
+WorkingDirectory=/home/admin1/todos-express-sqlite
+ExecStart=/usr/bin/node /home/admin1/todos-express-sqlite/bin/www
+Restart=always
+Environment=PORT=3000
+Environment=HOST=127.0.0.1
+
+[Install]
+WantedBy=multi-user.target
